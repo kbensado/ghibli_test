@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>A Nested List of Ghibli Movies with the people in it</h2>
+
+<ul>
+    {% for movie in movies.items() %}
+<ul>{{ movie[1][0] }}</ul>
+        {% if movie[1][0] != [] %}
+        {% for x in movie[1][1] %}
+    <li>{{ x }}</li>
+        {% endfor %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
+</body>
+</html>
